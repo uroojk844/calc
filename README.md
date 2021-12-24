@@ -17,5 +17,5 @@ ouline:none; <br>
 
 # YouTube video
 
-<iframe src="https://youtu.be/zPLpI8KK1qc"></iframe>
+https://youtu.be/zPLpI8KK1qc
 
