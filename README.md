@@ -15,8 +15,7 @@ ouline:none; <br>
 
 # Output
 
- ![127 0 0 1_5500_neo1 htm(iPhone 6_7_8)](https://user-images.githubusercontent.com/44065962/147353811-2e9af231-6afd-429f-b58e-2572e78715ae.png)
-
+![127 0 0 1_5500_calculator htm(My) (1)](https://user-images.githubusercontent.com/44065962/147353844-20383186-f43e-464f-9ba3-8547d0de1197.png)
 
 ![image](https://user-images.githubusercontent.com/44065962/147349936-cb736937-d661-4c76-8ef1-09bb2a364404.png)
 
