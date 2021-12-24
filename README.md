@@ -1,5 +1,5 @@
 # calc
-Calculator neomorphism design
+Calculator neumorphism design
 
 add this code to get more real look:
 
