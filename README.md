@@ -13,4 +13,4 @@ ouline:none;
 
 readonly
 
-<input type="text" placeholder="000" class="disp" readonly>
+&lt;input type="text" placeholder="000" class="disp" readonly&gt;
