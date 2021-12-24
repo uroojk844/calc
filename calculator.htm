@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./fontawesome-free/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #eee;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .calc{
+            display: grid;
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.9),
+            3px 3px 7px rgba(0, 0, 0, 0.16);
+            grid-template-columns: repeat(4, 50px);
+            gap: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #555;
+            user-select: none;
+        }
+
+        .title{
+            grid-column: 1/5;
+            display: grid;
+            grid-template-columns: max-content max-content;
+            justify-content: space-between;
+            font-size: x-large;
+        }
+
+        .disp{
+            grid-column: 1/5;
+            border: 0;
+            box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.9),
+            inset 3px 3px 7px rgba(0, 0, 0, 0.16);
+            border-radius: 22px;
+            font-size: 22px;
+            padding:8px 16px;
+            text-align: right;
+            background-color: transparent;
+        }
+
+        .button{
+            box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.9),
+            3px 3px 7px rgba(0, 0, 0, 0.16);
+            border-radius: 50%;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8),
+            inset 3px 3px 7px rgba(0, 0, 0, 0.16);
+        }
+
+        .plus, .minus, .multi, .divide {
+            background-color: orange;
+            color: white;
+        }
+
+        .equals{
+            background-color: seagreen;
+            color: white;
+        }
+
+        .backspace{
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .clear{
+            background-color: tomato;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <div class="title">Calculator
+            <i class="fas fa-calculator"></i>
+        </div>
+        <input type="text" placeholder="000" class="disp">
+        <div class="button" onclick="insert(1)">1</div>
+        <div class="button" onclick="insert(2)">2</div>
+        <div class="button" onclick="insert(3)">3</div>
+        <div class="button plus"  onclick="insert('+')">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="button" onclick="insert(4)">4</div>
+        <div class="button" onclick="insert(5)">5</div>
+        <div class="button" onclick="insert(6)">6</div>
+        <div class="button minus" onclick="insert('-')">
+            <i class="fas fa-minus"></i>
+        </div>
+        <div class="button" onclick="insert(7)">7</div>
+        <div class="button" onclick="insert(8)">8</div>
+        <div class="button" onclick="insert(9)">9</div>
+        <div class="button multi" onclick="insert('*')">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="button" onclick="insert('.')">.</div>
+        <div class="button" onclick="insert(0)">0</div>
+
+        <div class="button equals" onclick="calc()">
+            <i class="fas fa-equals"></i>
+        </div>
+
+        <div class="button divide" onclick="insert('/')">
+            <i class="fas fa-divide"></i>
+        </div>
+        <div class="button" onclick="sqr()"><span>x<sup>2</sup></span></div>
+        <div class="button" onclick="qube()"><span>x<sup>3</sup></div>
+
+        <div class="button backspace" onclick="back()">
+            <i class="fas fa-backspace"></i>
+        </div>
+
+        <div class="button clear" onclick="clr()">
+            C
+        </div>
+    </div>
+
+    <script>
+        var disp = document.querySelector('.disp');
+        function insert(n){
+            disp.value += n;
+        }
+
+        function calc() {
+            disp.value = eval(disp.value);
+        }
+
+        function clr() {
+            disp.value = "";
+        }
+
+        function sqr() {
+            disp.value = Math.pow(disp.value, 2);
+        }
+
+        function qube() {
+            disp.value = Math.pow(disp.value, 3);
+        }
+
+        function back() {
+            disp.value = disp.value.substr(0,disp.value.length-1);
+        }
+    </script>
+</body>
+
+</html>
